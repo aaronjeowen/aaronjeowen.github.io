@@ -56,7 +56,7 @@ var playState = {
     game.physics.arcade.collide(weapon.bullets, world.obj, wallBullet, null, this); //collide bullets with objects inside play area
 
 
-    if (game.device.android || game.device.ios) { //use onscreen controls if on mobile
+    if (game.device.android || game.device.iOS || game.device.mobileSafari) { //use onscreen controls if on mobile
       if (this.joystick.properties.inUse) {
         world.player.sprite.angle = this.joystick.properties.angle; //change angle of player depending on how the joystick is orientainted,
         world.player.sprite.lastAngle = world.player.sprite.angle;

@@ -30,7 +30,7 @@ var playState = {
     timer = game.time.create(false); //start timer to see how quickly the player can play the game
     timer.loop(1000, updateTimer, this);
     timer.start();
-    if (game.device.android || game.device.ios) { // add virtual controls if player is on mobile device, plug for this was created by Shawn Hymel -https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad/tree/master/js
+    if (game.device.android || game.device.iOS) { // add virtual controls if player is on mobile device, plug for this was created by Shawn Hymel -https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad/tree/master/js
       this.gamepad = this.game.plugins.add(Phaser.Plugin.VirtualGamepad);
       this.joystick = this.gamepad.addJoystick(100, 708, 1.2, 'gamepad');
       this.button = this.gamepad.addButton(1100, 708, 1.0, 'gamepad');
